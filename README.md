@@ -44,6 +44,12 @@ Current focus:
 
 More information can be found in the [`house_price`](./house_price/) project.
 
+### Machine Learning Models: Inside Out
+
+An interactive guide to how machine learning models work, with diagrams and runnable examples.
+
+[Open the interactive guide](https://mashpotatoio.github.io/dat_learning/machine_learning/ML_Models_Inside_Out_EN.html) · [View the HTML source](./machine_learning/ML_Models_Inside_Out_EN.html)
+
 ## Repository Structure
 
 ```text
