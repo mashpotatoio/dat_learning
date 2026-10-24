@@ -6,18 +6,7 @@ This is the first major project in my data science learning journey. I am using 
 
 ## Dataset
 
-The dataset contains residential property price statistics from different countries.
-
-It provides four types of indicators:
-
-- **Nominal Index** — house price index, 2010 = 100
-- **Nominal Year** — nominal year-on-year changes, in percent
-- **Real Index** — real house price index, 2010 = 100
-- **Real Year** — real year-on-year changes, in percent
-
-The dataset contains quarterly observations for multiple countries.
-
-Real house price series are nominal house price series adjusted using the Consumer Price Index (CPI).
+The included `house_pricedata/nominal-index.csv` contains quarterly nominal residential property price indices for multiple countries, with 2010 = 100. Its columns are `date`, `country`, and `price`; an index value is not a home price in currency.
 
 ## Data Source
 
@@ -35,14 +24,11 @@ house_price/
 │
 ├── README.md
 │
-├── data/
-│   ├── nominal_index.csv
-│   ├── nominal_year.csv
-│   ├── real_index.csv
-│   └── real_year.csv
-│
-└── notebooks/
-    └── 01_cleaning_visualization.ipynb
+├── house_pricedata/
+│   └── nominal-index.csv
+└── house_pricenotebooks/
+    ├── hp_cleaning_visualization.ipynb
+    └── 02_machine_learning_modeling.ipynb
 ```
 
 ## Phase 1 — Data Cleaning & Visualization
@@ -62,20 +48,11 @@ Topics currently being practiced:
 - Calculating basic statistics
 - Creating visualizations with Matplotlib
 
-## Phase 2 — Data Analysis
+## Phase 2 — Machine Learning Modeling
 
-The next stage will focus on asking questions about the data rather than only visualizing it.
+The [forecasting notebook](./house_pricenotebooks/02_machine_learning_modeling.ipynb) uses Korea's quarterly nominal index to predict the following quarter. It compares a persistence baseline with regression models, uses chronological training and holdout periods, and evaluates errors in index points. This is a historical learning exercise, not a current market forecast.
 
-Possible areas of analysis include:
-
-- Changes in house prices over time
-- Yearly house price trends
-- Comparing trends between countries
-- Nominal vs. real house prices
-- Identifying periods of large price changes
-- Exploring differences in housing markets between countries
-
-The specific questions will be refined as the analysis develops.
+Open the notebooks in Jupyter from `house_price/house_pricenotebooks/` so the relative path to the included CSV resolves. The modeling notebook also requires scikit-learn.
 
 ## Future Development
 
@@ -101,6 +78,8 @@ Future work may include statistical analysis and experimenting with machine lear
 - NumPy
 - Pandas
 - Matplotlib
+- Seaborn
+- scikit-learn
 - Jupyter Notebook
 - Git / GitHub
 
